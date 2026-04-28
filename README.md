@@ -342,15 +342,51 @@ vercel
 # Your site will be live instantly!
 ```
 
+### Cloudflare Pages
+
+```bash
+# 1. Install Wrangler CLI
+npm install -g wrangler
+
+# 2. Login to Cloudflare
+wrangler login
+
+# 3. Navigate to project directory
+cd portfolio-complete.html
+
+# 4. Deploy
+wrangler pages publish .
+
+# 5. Follow prompts:
+# - Project name: portfolio-complete
+# - Production branch: main
+
+# Or use Git integration:
+# 1. Go to dash.cloudflare.com
+# 2. Pages → Create a project → Connect to Git
+# 3. Select repository
+# 4. Build settings: None (static site)
+# 5. Deploy!
+
+# Your site will be live at:
+# https://portfolio-complete.pages.dev
+```
+
 ### Custom Domain
 
 **GitHub Pages**:
 1. Add `CNAME` file with your domain
 2. Configure DNS: `CNAME` → `username.github.io` 
 
-**Netlify/Vercel**:
+**Netlify/Vercel/Cloudflare**:
 1. Domain Settings → Add Custom Domain
 2. Follow DNS configuration steps
+
+**Cloudflare Pages (Best Performance)**:
+1. Go to Pages dashboard → Custom domains
+2. Add your domain
+3. Update DNS records in Cloudflare dashboard
+4. SSL automatically enabled (Free)
 
 ---
 
